@@ -1,0 +1,24 @@
+<!--<!DOCTYPE html>-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>ADD CATEGORIES</title>
+{% endblock %}
+{% block content %}
+<center>
+    <div class="container mt-5 p-3 w-25" style="margin-bottom:100px;">
+        <h2 class="text-center">ADD STOCK DETAILS</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+
+  <input type="number" class="form-control" value="{{pro.stock}}" name="n" placeholder="Enter the stock">
+</div>
+
+
+      <div class="mb-3">
+          <input type="submit" class="form-control">
+          </div>
+</form>
+        </div>
+{% endblock %}
